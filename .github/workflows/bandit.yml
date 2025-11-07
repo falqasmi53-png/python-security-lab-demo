@@ -10,13 +10,14 @@
 # https://github.com/marketplace/actions/bandit-scan is ISC licensed, by abirismyname
 # https://pypi.org/project/bandit/ is Apache v2.0 licensed, by PyCQA
 
-name: Bandit
+name: Bandit Scan
+
 on:
+  workflow_dispatch:    #  Add this line
   push:
-    branches: [ "main" ]
+    branches: [ main ]
   pull_request:
-    # The branches below must be a subset of the branches above
-    branches: [ "main" ]
+    branches: [ main ]
   schedule:
     - cron: '35 23 * * 4'
 
